@@ -4,12 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        <%= title %>
+        Webshop
     </title>
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <h1><%= title %></h1>
-    Hello EJS!
+    <h2>A Webshop vagy mi</h2>
+    <form>
+        <fieldset>
+            <legend>Válasszon terméket:</legend>
+            <div class="image-picker-group">
+            <label class="image-card">
+                <input type="radio" name="termek" value="villa" required>
+                <img src="./villa.jpg">
+                <span>Villa <br> 250Ft</span>
+            </label>
+            <label class="image-card">
+                <input type="radio" name="termek" value="enyaq">
+                <img src="./enyaq.png">
+                <span>Škoda Enyaq <br> 19200000Ft</span>
+            </label>
+            <label class="image-card">
+                <input type="radio" name="termek" value="bab">
+                <img src="./bab.png">
+                <span>Bab <br> 1Ft</span>
+            </label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Vásárlási adatok:</legend>
+            <label>Név: <br> <input type="text" name="nev" id="nev" required></label><br>
+            <label>Számlázási cím: <br> <input type="text" name="szamlazasiCim" id="szamlazasiCim" required></label><br>
+            <label>Szállítási cím: <br> <input type="text" name="szallitasiCim" id="szallitasiCim" required></label><br>
+            <label>Telefon: <br> <input type="text" name="telefon" id="telefon" required></label><br>
+            <label>Kuponkód: <br> <input type="text" name="kupon" id="kupon"></label> 
+        </fieldset>
+        <fieldset>
+            <legend>Bankkártya adatok:</legend>
+            <Label>Bankkártya szám: <br> <input type="text" name="kartyaSzam" id="kartyaSzam" required></Label><br>
+            <Label>Lejárati dátum: <br> <input type="text" name="lejarat" id="lejarat" required></Label><br>
+            <Label>Biztonsági kód: <br> <input type="text" name="biztonságiKod" id="biztonságiKod" required></Label>
+        </fieldset>
+        <button type="submit">Vásárlás</button>
+    </form>
 </body>
 </html>
