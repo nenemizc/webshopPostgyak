@@ -45,6 +45,9 @@
             <Label>Lejárati dátum: <br> <input type="text" name="lejarat" id="lejarat" required></Label><br>
             <Label>Biztonsági kód: <br> <input type="text" name="biztonságiKod" id="biztonságiKod" required></Label>
         </fieldset>
+        <% if (locals.error) { %>
+            <p> <%= locals.error %></p>
+        <% } %>
         <button type="submit">Vásárlás</button>
     </form>
 </body>
